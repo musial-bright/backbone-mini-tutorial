@@ -9,9 +9,9 @@
     <script type="text/javascript" src="javascript/vendor/backbone-min.js"></script>
     <script type="text/javascript" src="javascript/tutorial.js"></script>
     
-    <script type="text/javascript" src="javascript/app/person-app.js"></script>
-    <script type="text/javascript" src="javascript/app/person-model.js"></script>
-    <script type="text/javascript" src="javascript/app/person-view.js"></script>
+    <script type="text/javascript" src="javascript/lesson/person-app.js"></script>
+    <script type="text/javascript" src="javascript/lesson/person-model.js"></script>
+    <script type="text/javascript" src="javascript/lesson/person-view.js"></script>
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -57,10 +57,27 @@
       
     </article>
   
+    <script id="person_template" type="text/template">
+      <div class="name"><%= name %></div>
+      <div class="birthday"><%= birthday %></div>
+      <div class="occupation"><%= occupation %></div>
+      <div class="nationality"><%= nationality %></div>
+      <div class="active_years"><%= active_years %></div>
+    </script>
     
     <script>
       $(document).ready(function() {
+        // i.e. via ajax, static, etc.
+        var data = {
+          name: 'Stanley Kubrick',
+          birthday: 'July 26, 1928',
+          occupation: 'A lot ...',
+          nationality: 'American',
+          active_years: '1951-1999'
+        }
         
+        window.personApp = new PersonApp.Instance(data);
+        window.personApp.render();
       });
     </script>
     
