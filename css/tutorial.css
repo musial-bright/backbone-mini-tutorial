@@ -1,8 +1,8 @@
 section { padding: 0 0 10px 0;}
 
-.source { width: 700px; height: 130px; }
+.source { width: 850px; height: 140px; padding: 5px; font-size: 14px; }
 
-.content { min-height: 150px; }
+.content { width: 860px; min-height: 150px; }
 
 .person {
   border: 1px solid #ddd;

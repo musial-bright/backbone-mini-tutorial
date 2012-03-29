@@ -98,7 +98,7 @@ cols	1     2      3      4      5      6      7      8      9      10
 px		68    160    252    344    436    528    620    712    804    896	*/
 
 body {
-	padding: 72px 0 84px;
+	padding: 20px 0;
 	position: relative;
 	background: rgb(232,232,232);
 	color: rgb(60,60,60);
