@@ -1,0 +1,14 @@
+section { padding: 0 0 10px 0;}
+
+.source { width: 700px; height: 130px; }
+
+.content { min-height: 150px; }
+
+.person {
+  border: 1px solid #ddd;
+  padding: 5px;
+  box-shadow: 1px 1px 10px 5px rgba(163,163,163,1);
+  -webkit-box-shadow: 1px 1px 10px 5px rgba(163,163,163,1);
+  -moz-box-shadow: 1px 1px 10px 5px rgba(163,163,163,1);
+}
+.person .name { font-size: 130%; }
