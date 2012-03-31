@@ -37,7 +37,7 @@ window.personApp = new PersonApp.Instance(data);
 Now execute the _render_ function with the _.render_backbone_here_ selector
 
 ````javascript
-_window.personApp.render('.render_backbone_here')_
+window.personApp.render('.render_backbone_here')
 ````
 
 ### What's missing?
