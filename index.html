@@ -7,7 +7,6 @@
     <script type="text/javascript" src="javascript/vendor/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="javascript/vendor/underscore-min.js"></script>
     <script type="text/javascript" src="javascript/vendor/backbone-min.js"></script>
-    <script type="text/javascript" src="javascript/tutorial.js"></script>
     
     <script type="text/javascript" src="javascript/app/person-app.js"></script>
     <script type="text/javascript" src="javascript/app/person-model.js"></script>
@@ -46,17 +45,30 @@
       </section>
       
       <section>	
-        <h2>How it looks:</h2>
-        <div class="content"></div>
+        <h2>And this is a tiny backbone app rendering:</h2>
+        <div class="render_backbone_here"></div>
       </section>
-      <!--
-      <section>	
-        <h2>Go backbone go:</h2>
-        <div class="backbone"></div>
-      </section>
-      -->
+
     </article>
-    <!--
+    
+    <script>
+      $(document).ready(function() {
+        // person JSON data you get from a web service or simular 
+        var data = {
+          name: 'Stanley Kubrick',
+          birthday: 'July 26, 1928',
+          occupation: 'Film director, film producer, ...',
+          nationality: 'American',
+          active_years: '1951-1999'
+        }
+        
+        // the backbone app
+        window.personApp = new PersonApp.Instance(data);
+        window.personApp.render('.render_backbone_here');
+      });
+    </script>
+
+    <!-- person template for the backbone app -->
     <script id="person_template" type="text/template">
       <div class="name"><%= name %></div>
       <div class="birthday"><%= birthday %></div>
@@ -64,21 +76,6 @@
       <div class="nationality"><%= nationality %></div>
       <div class="active_years"><%= active_years %></div>
     </script>
-    
-    <script>
-      $(document).ready(function() {
-        var data = {
-          name: 'Stanley Kubrick',
-          birthday: 'July 26, 1928',
-          occupation: 'A lot ...',
-          nationality: 'American',
-          active_years: '1951-1999'
-        }
-        
-        window.personApp = new PersonApp.Instance(data);
-        window.personApp.render();
-      });
-    </script>
-    -->
+
   </body>
 </html>
