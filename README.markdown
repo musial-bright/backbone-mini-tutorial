@@ -14,16 +14,16 @@ All the libraries should be referenced: jQuery, Underscore and Backbone
 
 ### 3. Create app structure
 
-For the backbone app we need a view and a model for the person data. Each will 
-have its own file in the javascript/app folder:
-_person-view.js_, _person-model.js
+For the backbone app we need a view and a model to visualize and represent the
+persons data. The view and teh model will have its own file in the 
+javascript/app folder: _person-view.js_, _person-model.js_
 
 For the view a template is needed, lets call it _person_template_.
-The easiest way to do this is to put it  at the end of the _body_ tag in the
-_index.html_ file.
+The easiest way to do this is to put the template at the end of the _body_ tag
+in the _index.html_ file.
 
-To tighten everything up, a _person-app.js_ is needed where the view and the model
-will be instantiated.
+To tighten everything up, a _person-app.js_ will be implemented, where the view
+and the model will be instantiated.
 
 ### 4. Integrate the app into the page
 
@@ -34,7 +34,8 @@ _person-app.js_ file like this:
 window.personApp = new PersonApp.Instance(data);
 ````
 
-Now execute the _render_ function with the _.render_backbone_here_ selector
+Now execute the _render_ function with the _.render_backbone_here_ jQuery
+selector
 
 ````javascript
 window.personApp.render('.render_backbone_here')
