@@ -8,7 +8,6 @@
       _.bindAll(this, 'render');
       this.model = this.options.model;
       this.model.bind('change:name', this.render);
-      this.model.bind('change:name', this.render);
       this.model.bind('change:birthday', this.render);
       this.model.bind('change:occupation', this.render);
       this.model.bind('change:nationality', this.render);
